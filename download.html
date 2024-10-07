@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            overflow-x: hidden;
+            background-color: #080808;
+        }
+         header 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(77, 0, 0, 0.664);
+            position: fixed;
+            z-index: 1000;
+            width: 100%;
+            padding: 5px;
+        }
+        nav ul
+        {
+            display: flex;
+        }
+        nav ul li
+        {
+            list-style: none;
+            margin-left: 30px;
+        }
+        nav ul li a
+        {
+            text-decoration: none;
+            color:#fff ;
+            font-size: 15px;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: .4s;
+        }
+        nav ul li.active a
+        {
+            border-bottom: 2px solid white;
+        }
+        nav ul li.btn a
+        {
+width: 250px;
+height: 10vh;
+background-color: red;
+color: #ffffff;
+outline: none;
+border: none;
+clip-path: polygon(35% 0,100% 0,100% 100%,0 100%);
+font-size: 1.2rem;
+font-weight: bold;
+padding: 10px;
+text-align: center;
+padding-left: 40px;
+        }
+        nav ul li:not(:last-child) a:hover,
+        nav ul li:not(:last-child) a:focus
+        {
+            border-bottom: 2px solid #fff;
+        }
+        header .logo h2 a
+        {
+            display: block;
+            font-size: 28px;
+            text-decoration: none;
+            color: #fff;
+font-weight: 600;
+    
+        }
+        .wrapper
+        {
+            position: relative;
+        
+            width: 890px;
+            height: 500px;
+        }
+        video
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .controls
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #00000080;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    input[type="range"]
+    {
+        width: 200px;
+    }
+    .container3
+{
+    background-color: rgba(68, 0, 0, 0.541);
+    margin: 100px 80px 0px 80px;
+    height: auto;
+    align-content: center;
+    padding: 10px 150px 10px;
+     border-radius: 15px;
+}
+.section1
+{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(26, 26, 26, 0.744),rgba(0,0,0,0.754)),
+    url(../resorce/0a1f4874ac2b0d160cf0641cb67a3d63.jpg);
+    background-size: cover;
+    background-position: center;
+margin-top: 10px;
+    background-attachment: fixed;
+}
+.section1-wrapper
+{
+    width: 70%;
+    margin: auto;
+}
+.section1 h1
+{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid red;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+}
+.section1 p
+{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.section1-image{
+    display: flex;
+}
+.section1-image .img{
+    width: 300px;
+    height: 200px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.section1-image .img img
+{
+    width: 100%;
+    height: 100%;
+
+}
+.btn-flex
+{
+    text-align: center;
+}
+.btn-flex a
+{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: red;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2><a href="#">horror gaming website</a></h2>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#">home</a></li>
+                   <li><a href="#">cantact us</a></li>
+                   <li><a href="#">all games</a></li>
+                      <li class="btn"><a href="#">log in</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <div class="container3">
+    <div class="wrapper">
+        <video id="main-video">
+            <source src="../g_a18186_2024-07-28-14-39-45_1722164985813.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button id="playBtn">&#9658;</button>
+            <input type="range" id="rangeArea" min="0" max="100" step="0.1" value="0">
+            <button id="muteBtn">&#12866;</button>
+            <input type="range" id="volumeArea" min="0" max="1" step="0.1" value="1">
+        </div>
+    </div>
+    <script src="video.js"></script>
+
+
+    <section class="section1">
+        <div class="section1-wrapper">
+            <h1>pictures</h1>
+            <br>
+            <div class="section1-image">
+                <div class="img"><img src="../resorce/resi3-3.webp" alt=""></div>
+                <div class="img"><img src="../resorce/resi3-6.webp" alt=""></div>
+            </div>
+        </div>
+        <br>
+            <div class="section1-wrapper">
+                <h1>about</h1>
+                <br>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam sit veritatis ipsum dicta perferendis deserunt reprehenderit distinctio, eum sint! Ducimus sit aperiam quae dolorum, ex dolore vel architecto libero? Aperiam!</p>
+            </div>
+            <br>
+            <div class="section1-wrapper">
+                <h1>download link</h1>
+                <br>
+    <div class="btn-flex">
+        <a href="#">download video</a>
+        <a href="#">download game</a>
+    </div>
+            </div>
+    </section>
+
+
+
+    </div>
+</body>
+</html>
